@@ -5,23 +5,21 @@
  */
 package input;
 
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
 
 /**
  *
- * @author Joao Guilherme
+ * @author joaog
  */
-public class InputHandler implements KeyListener, FocusListener {
+public class InputHandler implements KeyListener {
 
     public boolean[] key = new boolean[68836];
-    public static int mouseX;
-    public static int mouseY;
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+        
+    }
 
     @Override
     public void keyPressed(KeyEvent e) {
@@ -38,22 +36,4 @@ public class InputHandler implements KeyListener, FocusListener {
             key[keyCode] = false;
         }
     }
-
-    @Override
-    public void focusGained(FocusEvent e) {
-
-    }
-
-    @Override
-    public void focusLost(FocusEvent e) {
-        for (int i = 0; i < key.length; i++) {
-            key[i] = false;
-        }
-    }
-
-    @Override
-    public void keyTyped(KeyEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
 }

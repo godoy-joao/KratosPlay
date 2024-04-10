@@ -5,28 +5,14 @@
  */
 package main;
 
-import input.Controller;
-import java.awt.event.KeyEvent;
-
 /**
  *
- * @author Senai
+ * @author joaog
  */
 public class Game {
-    public static int time;
-    public Controller controls;
+    public static int time = 0;
     
-    
-
-    public Game() {
-        controls = new Controller();
-    }
-
-    public void tick(boolean[] key) {
+    public void tick() {
         time++;
-        boolean left = key[KeyEvent.VK_A];
-        boolean right = key[KeyEvent.VK_D];       
-        
-        controls.tick(left, right);
     }
 }
