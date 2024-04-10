@@ -7,19 +7,8 @@ package input;
 
 /**
  *
- * @author Joao Guilherme
+ * @author joaog
  */
 public class Controller {
-
-    public double x;
-
-    public void tick(boolean left, boolean right) {
-        double xMove = 0;
-        if (left) {
-            xMove--;           
-        }
-        if (right) {
-            xMove++;           
-        }
-    }
+    
 }
